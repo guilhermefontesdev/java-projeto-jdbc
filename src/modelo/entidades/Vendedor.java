@@ -1,7 +1,7 @@
 package modelo.entidades;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class Vendedor implements Serializable {
@@ -11,7 +11,7 @@ public class Vendedor implements Serializable {
 	private Integer id;
 	private String nome;
 	private String email;
-	private LocalDate aniversario;
+	private Date aniversario;
 	private Double salarioBase;
 	private Departamento departamento;
 	
@@ -19,7 +19,7 @@ public class Vendedor implements Serializable {
 		
 	}
 
-	public Vendedor(Integer id, String nome, String email, LocalDate aniversario, Double salarioBase,
+	public Vendedor(Integer id, String nome, String email, Date aniversario, Double salarioBase,
 			Departamento departamento) {
 		this.id = id;
 		this.nome = nome;
@@ -53,12 +53,12 @@ public class Vendedor implements Serializable {
 		this.email = email;
 	}
 
-	public LocalDate getAniversario() {
+	public Date getAniversario() {
 		return aniversario;
 	}
 
-	public void setAniversario(LocalDate aniversario) {
-		this.aniversario = aniversario;
+	public void setAniversario(Date date) {
+		this.aniversario = date;
 	}
 
 	public Double getSalarioBase() {

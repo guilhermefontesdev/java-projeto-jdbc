@@ -2,14 +2,15 @@ package modelo.DAO;
 
 import java.util.List;
 
-import modelo.entidades.Departamento;
+
+import modelo.entidades.Vendedor;
 
 public interface VendedorDAO {
-	void insert(Departamento obj);
-	void update(Departamento obj);
+	void insert(Vendedor obj);
+	void update(Vendedor obj);
 	void deleteById(Integer id);
-	Departamento findById(Integer id);
-	List <Departamento> findAll();
+	Vendedor findById(Integer id);
+	List <Vendedor> findAll();
 	
 	
 }

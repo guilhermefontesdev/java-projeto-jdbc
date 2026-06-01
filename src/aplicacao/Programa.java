@@ -1,9 +1,7 @@
 package aplicacao;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-import modelo.entidades.Departamento;
+import modelo.DAO.DaoFactory;
+import modelo.DAO.VendedorDAO;
 import modelo.entidades.Vendedor;
 
 public class Programa {
@@ -12,12 +10,12 @@ public class Programa {
 		
 		
 		
-		Departamento obj = new Departamento(1,"Computadores");
-		
-		System.out.println(obj);
 		
 		
-		Vendedor vendedor = new Vendedor(3, "Jonas", "Jonas@gmail.com" , LocalDate.parse("22/06/2007" , DateTimeFormatter.ofPattern("dd/MM/yyyy")) , 3000.00, obj);
+		VendedorDAO vDao = DaoFactory.createVendedorDAO();
+		
+		
+		Vendedor vendedor = vDao.findById(3);
 		System.out.println(vendedor);
 
 	}
