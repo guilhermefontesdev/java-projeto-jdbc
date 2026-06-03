@@ -38,10 +38,16 @@ public class Programa {
 			System.out.println(v);
 		}
 		
-		System.out.println("====Teste 4=====");
+		System.out.println("==== Teste 4 INSERT =====");
 		Vendedor newVendedor = new Vendedor(null, "Joao", "joao@gmail.com", new Date(), 4000.00, departamento);
 		vDao.insert(newVendedor);
 		System.out.println("Inserido!, ID: " + newVendedor.getId());
+		
+		System.out.println("==== Teste 5 UPDATE =====");
+		Vendedor vendedor1 = vDao.findById(1);
+		vendedor1.setNome("Marcos marcos");
+		vDao.update(vendedor1);
+		System.out.println("update concluido!");
 
 	}
 
