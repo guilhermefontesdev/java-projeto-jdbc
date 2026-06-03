@@ -28,6 +28,14 @@ public class Programa {
 		for(Vendedor v: list) {
 			System.out.println(v);
 		}
+		
+		System.out.println("=== Teste 3: Vendedor findAll ===");
+		
+		list = vDao.findAll();
+		
+		for(Vendedor v: list) {
+			System.out.println(v);
+		}
 
 	}
 
